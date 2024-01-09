@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Set Reminder</title>
+    <style>
+        body {
+            background-color: #00002e;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #body_header {
+            width: auto;
+            margin: 20px auto;
+            font-size: 25px;
+            color: #fff;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 10px auto;
+            padding: 20px;
+            background: #f4f7f8;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0 0 20px 0;
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        input,
+        select,
+        textarea {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            font-size: 16px;
+            height: 40px;
+            outline: 0;
+            padding: 8px;
+            width: 100%;
+            color: #333;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        select {
+            height: 40px;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 15px;
+            color: #fff;
+            background-color: #4bc970;
+            font-size: 18px;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            border: none;
+        }
+
+        legend {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .number {
+            background-color: #5fcf80;
+            color: #fff;
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            font-size: 0.8em;
+            margin-right: 4px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="body_header">
+        <h1>Set Reminder</h1>
+        <p>Never miss an appointment again!</p>
+    </div>
+    <form action="index.html" method="post">
+        <fieldset>
+            <legend><span class="number">1</span>Your Details</legend>
+            <label for="full_name">Full Name*:</label>
+            <input type="text" id="full_name" name="full_name" placeholder="Name" required pattern="[a-zA-Z ]+">
+
+            <label for="email">Email*:</label>
+            <input type="email" id="email" name="email" placeholder="name@gmail.com" required>
+
+            <label for="patient_type">Type of Patient*:</label>
+            <select id="patient_type" name="patient_type" required>
+                <option value="new">New Patient</option>
+                <option value="existing">Existing Patient</option>
+            </select>
+
+            <label for="date">Date*:</label>
+            <input type="date" name="date" value="" required>
+
+            <label for="time">Time*:</label>
+            <input type="time" name="time" value="" required>
+        </fieldset>
+
+        <fieldset>
+            <legend><span class="number">2</span>Contact Preferences</legend>
+            <label for="contact_mode">Mode of Contact*:</label>
+            <select id="contact_mode" name="contact_mode" required>
+                <option value="phone">Phone</option>
+                <option value="sms">SMS</option>
+                <option value="email">Email</option>
+            </select>
+        </fieldset>
+
+        <button type="submit">Set Reminder</button>
+    </form>
+</body>
+
+</html>
